@@ -7,9 +7,4 @@ defmodule RequestPublisher do
     |> publish_sync
     |> IO.inspect
   end
-
-  def emit do
-    Events.AThingWasDone.new
-    |> publish
-  end
 end
