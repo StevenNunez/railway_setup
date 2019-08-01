@@ -1,0 +1,174 @@
+2019-07-31 19:28:23 =ERROR REPORT====
+** Generic server 'Elixir.Events' terminating 
+** Last message in was {basic_deliver,<<"{\"encoded_message\":\"Ih5hbXEuZ2VuLWlobFNqT1JySmdmRFdrTEpiSXZZTWc=\",\"type\":\"Requests::RequestAThing\"}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-4AYkznOUlbTYeCF23bLjng">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"requests">>,expiration => undefined,headers => undefined,message_id => undefined,persistent => false,priority => undefined,redelivered => false,reply_to => undefined,routing_key => <<>>,timestamp => undefined,type => undefined,user_id => undefined}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.309.0>},pid => <0.329.0>},exchange => <<"requests">>,queue => <<"3">>}
+** Reason for termination == 
+** {function_clause,[{'Elixir.Events',handle_in,[#{'__struct__' => 'Elixir.Requests.RequestAThing',context => #{},correlation_id => <<>>,reply_to => <<"amq.gen-ihlSjORrJgfDWkLJbIvYMg">>,user_uuid => <<>>,uuid => <<>>}],[{file,"lib/sender/events.ex"},{line,6}]},{'Elixir.RailwayIpc.Core.RequestsConsumer',process,4,[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,9}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-07-31 19:28:23 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Events:init/1
+    pid: <0.303.0>
+    registered_name: 'Elixir.Events'
+    exception error: {function_clause,[{'Elixir.Events',handle_in,[#{'__struct__' => 'Elixir.Requests.RequestAThing',context => #{},correlation_id => <<>>,reply_to => <<"amq.gen-ihlSjORrJgfDWkLJbIvYMg">>,user_uuid => <<>>,uuid => <<>>}],[{file,"lib/sender/events.ex"},{line,6}]},{'Elixir.RailwayIpc.Core.RequestsConsumer',process,4,[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,9}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.RailwayIpc.Consumer.Supervisor','Elixir.RailwayIpc.Connection.Supervisor','Elixir.Sender.Supervisor',<0.297.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.301.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 10467
+  neighbours:
+2019-07-31 19:28:23 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.RailwayIpc.Consumer.Supervisor'}
+     Context:    child_terminated
+     Reason:     {function_clause,[{'Elixir.Events',handle_in,[#{'__struct__' => 'Elixir.Requests.RequestAThing',context => #{},correlation_id => <<>>,reply_to => <<"amq.gen-ihlSjORrJgfDWkLJbIvYMg">>,user_uuid => <<>>,uuid => <<>>}],[{file,"lib/sender/events.ex"},{line,6}]},{'Elixir.RailwayIpc.Core.RequestsConsumer',process,4,[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,9}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.303.0>},{id,'Elixir.Events'},{mfargs,{'Elixir.Events',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-07-31 19:29:54 =ERROR REPORT====
+** Generic server 'Elixir.Events' terminating 
+** Last message in was {basic_deliver,<<"{\"encoded_message\":\"Ih5hbXEuZ2VuLWlobFNqT1JySmdmRFdrTEpiSXZZTWc=\",\"type\":\"Requests::RequestAThing\"}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-MyoyjzjycE7in7UBzyK9Rw">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"requests">>,expiration => undefined,headers => undefined,message_id => undefined,persistent => false,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => undefined,type => undefined,user_id => undefined}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.1096.0>},pid => <0.1116.0>},exchange => <<"requests">>,queue => <<"3">>}
+** Reason for termination == 
+** {function_clause,[{'Elixir.Events',handle_in,[#{'__struct__' => 'Elixir.Requests.RequestAThing',context => #{},correlation_id => <<>>,reply_to => <<"amq.gen-ihlSjORrJgfDWkLJbIvYMg">>,user_uuid => <<>>,uuid => <<>>}],[{file,"lib/sender/events.ex"},{line,6}]},{'Elixir.RailwayIpc.Core.RequestsConsumer',process,4,[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,9}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-07-31 19:29:54 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Events:init/1
+    pid: <0.1090.0>
+    registered_name: 'Elixir.Events'
+    exception error: {function_clause,[{'Elixir.Events',handle_in,[#{'__struct__' => 'Elixir.Requests.RequestAThing',context => #{},correlation_id => <<>>,reply_to => <<"amq.gen-ihlSjORrJgfDWkLJbIvYMg">>,user_uuid => <<>>,uuid => <<>>}],[{file,"lib/sender/events.ex"},{line,6}]},{'Elixir.RailwayIpc.Core.RequestsConsumer',process,4,[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,9}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.RailwayIpc.Consumer.Supervisor','Elixir.RailwayIpc.Connection.Supervisor','Elixir.Sender.Supervisor',<0.1084.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.1088.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 10194
+  neighbours:
+2019-07-31 19:29:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.RailwayIpc.Consumer.Supervisor'}
+     Context:    child_terminated
+     Reason:     {function_clause,[{'Elixir.Events',handle_in,[#{'__struct__' => 'Elixir.Requests.RequestAThing',context => #{},correlation_id => <<>>,reply_to => <<"amq.gen-ihlSjORrJgfDWkLJbIvYMg">>,user_uuid => <<>>,uuid => <<>>}],[{file,"lib/sender/events.ex"},{line,6}]},{'Elixir.RailwayIpc.Core.RequestsConsumer',process,4,[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,9}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.1090.0>},{id,'Elixir.Events'},{mfargs,{'Elixir.Events',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-07-31 19:31:11 =ERROR REPORT====
+** Generic server 'Elixir.Events' terminating 
+** Last message in was {basic_deliver,<<"{\"encoded_message\":\"Ih5hbXEuZ2VuLWlobFNqT1JySmdmRFdrTEpiSXZZTWc=\",\"type\":\"Requests::RequestAThing\"}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-GEHjDMW_aZbOyXupzVJrdg">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"requests">>,expiration => undefined,headers => undefined,message_id => undefined,persistent => false,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => undefined,type => undefined,user_id => undefined}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.303.0>},pid => <0.323.0>},exchange => <<"events">>,queue => <<"3">>}
+** Reason for termination == 
+** {function_clause,[{'Elixir.Events',handle_in,[#{'__struct__' => 'Elixir.Requests.RequestAThing',context => #{},correlation_id => <<>>,reply_to => <<"amq.gen-ihlSjORrJgfDWkLJbIvYMg">>,user_uuid => <<>>,uuid => <<>>}],[{file,"lib/sender/events.ex"},{line,6}]},{'Elixir.RailwayIpc.Core.RequestsConsumer',process,4,[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,9}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-07-31 19:31:11 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Events:init/1
+    pid: <0.297.0>
+    registered_name: 'Elixir.Events'
+    exception error: {function_clause,[{'Elixir.Events',handle_in,[#{'__struct__' => 'Elixir.Requests.RequestAThing',context => #{},correlation_id => <<>>,reply_to => <<"amq.gen-ihlSjORrJgfDWkLJbIvYMg">>,user_uuid => <<>>,uuid => <<>>}],[{file,"lib/sender/events.ex"},{line,6}]},{'Elixir.RailwayIpc.Core.RequestsConsumer',process,4,[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,9}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.RailwayIpc.Consumer.Supervisor','Elixir.RailwayIpc.Connection.Supervisor','Elixir.Sender.Supervisor',<0.291.0>]
+    message_queue_len: 1
+    messages: [{basic_deliver,<<"{\"encoded_message\":\"Ih5hbXEuZ2VuLTNJUmk1aWEzUURWUlpUYUdma2JCMlE=\",\"type\":\"Requests::RequestAThing\"}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-GEHjDMW_aZbOyXupzVJrdg">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 2,exchange => <<"requests">>,expiration => undefined,headers => undefined,message_id => undefined,persistent => false,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => undefined,type => undefined,user_id => undefined}}]
+    links: [<0.295.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 9775
+  neighbours:
+2019-07-31 19:31:11 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.RailwayIpc.Consumer.Supervisor'}
+     Context:    child_terminated
+     Reason:     {function_clause,[{'Elixir.Events',handle_in,[#{'__struct__' => 'Elixir.Requests.RequestAThing',context => #{},correlation_id => <<>>,reply_to => <<"amq.gen-ihlSjORrJgfDWkLJbIvYMg">>,user_uuid => <<>>,uuid => <<>>}],[{file,"lib/sender/events.ex"},{line,6}]},{'Elixir.RailwayIpc.Core.RequestsConsumer',process,4,[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,9}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.297.0>},{id,'Elixir.Events'},{mfargs,{'Elixir.Events',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-07-31 19:35:15 =ERROR REPORT====
+** Generic server 'Elixir.Requests' terminating 
+** Last message in was {basic_deliver,<<"{\"encoded_message\":\"\",\"type\":\"Events::AThingWasDone\"}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-rdnqXeI_H7A66fbno4oWcw">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 4,exchange => <<"requests">>,expiration => undefined,headers => undefined,message_id => undefined,persistent => false,priority => undefined,redelivered => false,reply_to => undefined,routing_key => <<>>,timestamp => undefined,type => undefined,user_id => undefined}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.303.0>},pid => <0.328.0>},exchange => <<"requests">>,queue => <<"c">>}
+** Reason for termination == 
+** {function_clause,[{'Elixir.RailwayIpc.Core.RequestsConsumer',post_processing,[ok,#{'__struct__' => 'Elixir.Events.AThingWasDone',context => #{},correlation_id => <<>>,user_uuid => <<>>,uuid => <<>>},#Fun<Elixir.Requests.0.79135101>,#Fun<Elixir.Requests.1.79135101>],[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,18}]},{'Elixir.Requests',handle_info,2,[{file,"lib/sender/requests.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-07-31 19:35:15 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Requests:init/1
+    pid: <0.298.0>
+    registered_name: 'Elixir.Requests'
+    exception error: {function_clause,[{'Elixir.RailwayIpc.Core.RequestsConsumer',post_processing,[ok,#{'__struct__' => 'Elixir.Events.AThingWasDone',context => #{},correlation_id => <<>>,user_uuid => <<>>,uuid => <<>>},#Fun<Elixir.Requests.0.79135101>,#Fun<Elixir.Requests.1.79135101>],[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,18}]},{'Elixir.Requests',handle_info,2,[{file,"lib/sender/requests.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.RailwayIpc.Consumer.Supervisor','Elixir.RailwayIpc.Connection.Supervisor','Elixir.Sender.Supervisor',<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.295.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 15335
+  neighbours:
+2019-07-31 19:35:15 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.RailwayIpc.Consumer.Supervisor'}
+     Context:    child_terminated
+     Reason:     {function_clause,[{'Elixir.RailwayIpc.Core.RequestsConsumer',post_processing,[ok,#{'__struct__' => 'Elixir.Events.AThingWasDone',context => #{},correlation_id => <<>>,user_uuid => <<>>,uuid => <<>>},#Fun<Elixir.Requests.0.79135101>,#Fun<Elixir.Requests.1.79135101>],[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,18}]},{'Elixir.Requests',handle_info,2,[{file,"lib/sender/requests.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.298.0>},{id,'Elixir.Requests'},{mfargs,{'Elixir.Requests',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-07-31 19:36:37 =ERROR REPORT====
+** Generic server 'Elixir.Events' terminating 
+** Last message in was {basic_deliver,<<"{\"encoded_message\":\"\",\"type\":\"Events::AThingWasDone\"}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-2Gn11RyrFx8wKn79Gsp0UQ">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"events">>,expiration => undefined,headers => undefined,message_id => undefined,persistent => false,priority => undefined,redelivered => false,reply_to => undefined,routing_key => <<>>,timestamp => undefined,type => undefined,user_id => undefined}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.303.0>},pid => <0.323.0>},exchange => <<"events">>,queue => <<"b">>}
+** Reason for termination == 
+** {function_clause,[{'Elixir.RailwayIpc.Core.RequestsConsumer',post_processing,[ok,#{'__struct__' => 'Elixir.Events.AThingWasDone',context => #{},correlation_id => <<>>,user_uuid => <<>>,uuid => <<>>},#Fun<Elixir.Events.0.91040133>,#Fun<Elixir.Events.1.91040133>],[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,18}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-07-31 19:36:37 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Events:init/1
+    pid: <0.297.0>
+    registered_name: 'Elixir.Events'
+    exception error: {function_clause,[{'Elixir.RailwayIpc.Core.RequestsConsumer',post_processing,[ok,#{'__struct__' => 'Elixir.Events.AThingWasDone',context => #{},correlation_id => <<>>,user_uuid => <<>>,uuid => <<>>},#Fun<Elixir.Events.0.91040133>,#Fun<Elixir.Events.1.91040133>],[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,18}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.RailwayIpc.Consumer.Supervisor','Elixir.RailwayIpc.Connection.Supervisor','Elixir.Sender.Supervisor',<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.295.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 9454
+  neighbours:
+2019-07-31 19:36:37 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.RailwayIpc.Consumer.Supervisor'}
+     Context:    child_terminated
+     Reason:     {function_clause,[{'Elixir.RailwayIpc.Core.RequestsConsumer',post_processing,[ok,#{'__struct__' => 'Elixir.Events.AThingWasDone',context => #{},correlation_id => <<>>,user_uuid => <<>>,uuid => <<>>},#Fun<Elixir.Events.0.91040133>,#Fun<Elixir.Events.1.91040133>],[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,18}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.297.0>},{id,'Elixir.Events'},{mfargs,{'Elixir.Events',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-07-31 19:37:47 =ERROR REPORT====
+** Generic server 'Elixir.Events' terminating 
+** Last message in was {basic_deliver,<<"{\"encoded_message\":\"\",\"type\":\"Events::AThingWasDone\"}">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-9egCzgrKrsmeUYfgrDlt5Q">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 4,exchange => <<"events">>,expiration => undefined,headers => undefined,message_id => undefined,persistent => false,priority => undefined,redelivered => false,reply_to => undefined,routing_key => <<>>,timestamp => undefined,type => undefined,user_id => undefined}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.284.0>},pid => <0.304.0>},exchange => <<"events">>,queue => <<"b">>}
+** Reason for termination == 
+** {function_clause,[{'Elixir.RailwayIpc.Core.RequestsConsumer',post_processing,[ok,#{'__struct__' => 'Elixir.Events.AThingWasDone',context => #{},correlation_id => <<>>,user_uuid => <<>>,uuid => <<>>},#Fun<Elixir.Events.0.91040133>,#Fun<Elixir.Events.1.91040133>],[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,18}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2019-07-31 19:37:47 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Events:init/1
+    pid: <0.278.0>
+    registered_name: 'Elixir.Events'
+    exception error: {function_clause,[{'Elixir.RailwayIpc.Core.RequestsConsumer',post_processing,[ok,#{'__struct__' => 'Elixir.Events.AThingWasDone',context => #{},correlation_id => <<>>,user_uuid => <<>>,uuid => <<>>},#Fun<Elixir.Events.0.91040133>,#Fun<Elixir.Events.1.91040133>],[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,18}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.RailwayIpc.Consumer.Supervisor','Elixir.RailwayIpc.Connection.Supervisor','Elixir.Sender.Supervisor',<0.272.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.276.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 10677
+  neighbours:
+2019-07-31 19:37:47 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.RailwayIpc.Consumer.Supervisor'}
+     Context:    child_terminated
+     Reason:     {function_clause,[{'Elixir.RailwayIpc.Core.RequestsConsumer',post_processing,[ok,#{'__struct__' => 'Elixir.Events.AThingWasDone',context => #{},correlation_id => <<>>,user_uuid => <<>>,uuid => <<>>},#Fun<Elixir.Events.0.91040133>,#Fun<Elixir.Events.1.91040133>],[{file,"lib/railway_ipc/core/requests_consumer.ex"},{line,18}]},{'Elixir.Events',handle_info,2,[{file,"lib/sender/events.ex"},{line,2}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.278.0>},{id,'Elixir.Events'},{mfargs,{'Elixir.Events',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
