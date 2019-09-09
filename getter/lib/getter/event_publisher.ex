@@ -1,9 +1,9 @@
 defmodule EventPublisher do
   use RailwayIpc.Publisher,
-      exchange: "events"
+    exchange: "events"
 
-  def emit do
-    Events.AThingWasDone.new
+  def emit(_args) do
+    Events.AThingWasDone.new(correlation_id: "123")
     |> publish
   end
 end

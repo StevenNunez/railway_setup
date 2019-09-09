@@ -8,7 +8,7 @@ defmodule Getter.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-    RailwayIpc.Connection.Supervisor
+      RailwayIpc.Connection.Supervisor
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
